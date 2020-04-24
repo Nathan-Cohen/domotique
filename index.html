@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cyril</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="card text-center" style="width: 50%; margin: auto;">
+        <div class="card-header">
+            <h1>Le nuage</h1>
+        </div>
+    </div>
+
+    <div class="card-body text-center" style="margin: auto;">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary">
+                <input type="checkbox" name="options" id="matin" onclick="matin()"> Matin
+            </label>
+            <label class="btn btn-secondary">
+                <input type="checkbox" name="options" id="soiree" onclick="soiree()"> Soirée
+            </label>
+            <label class="btn btn-secondary">
+                <input type="checkbox" name="options" id="nuit" onclick="nuit()"> Nuit
+            </label>
+            <label class="btn btn-secondary">
+                <input type="checkbox" name="options" id="reveil" onclick="reveil()"> Reveil
+            </label>
+        </div>
+    </div>
+
+    <!-- LAMPE -->
+    <div class="card" style="width: 50%; margin: auto; margin-bottom: 10px;">
+        <h5 class="card-header">Lampe</h5>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="btn-group col-sm">
+                        <button type="button" class="btn btn-primary btn-lg btn-block mr-1">On</button></br>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Off</button>
+                    </div>
+                    <div class="btn-group-vertical col-sm">
+                        <div class="input-group p-1">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">Lampe A</div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm mr-1">On</button>
+                            <button type="button" class="btn btn-primary btn-sm">Off</button>
+                        </div>
+                        <div class="input-group p-1">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">Lampe B</div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm mr-1">On</button>
+                            <button type="button" class="btn btn-primary btn-sm">Off</button>
+                        </div>
+                        <div class="input-group p-1">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">Lampe C</div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm mr-1">On</button>
+                            <button type="button" class="btn btn-primary btn-sm">Off</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VOLET -->
+    <div class="card" style="width: 50%; margin: auto; margin-bottom: 10px;">
+        <h5 class="card-header">Volet</h5>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="btn-group-vertical col-sm">
+                        <button type="button" class="btn btn-primary btn-lg btn-block m-1">Monter</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block m-1">Stop</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block m-1">Descendre</button>
+                    </div>
+
+                    <div class="btn-group-vertical col-sm">
+                        <div class="input-group p-1">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">Volet A</div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm mr-1">On</button>
+                            <button type="button" class="btn btn-primary btn-sm">Off</button>
+                        </div>
+                        <div class="input-group p-1">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">Volet B</div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm mr-1">On</button>
+                            <button type="button" class="btn btn-primary btn-sm">Off</button>
+                        </div>
+                        <div class="input-group p-1">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">Volet C</div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm mr-1">On</button>
+                            <button type="button" class="btn btn-primary btn-sm">Off</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOTEUR -->
+    <div class="card" style="width: 50%; margin: auto;">
+        <h5 class="card-header">Moteur</h5>
+        <div class="card-body" style="margin: auto;">
+            <div class="container">
+                <div class="row">
+                    <div class="btn-group-vertical col-sm">
+                            <div class="input-group p-1">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="btnGroupAddon">Moteur A</div>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-lg mr-1">Avant</button>
+                                <button type="button" class="btn btn-primary btn-lg">Arriere</button>
+                            </div>
+                            <div class="input-group p-1">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="btnGroupAddon">Moteur B</div>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-lg mr-1">Avant</button>
+                                <button type="button" class="btn btn-primary btn-lg">Arriere</button>                                
+                            </div>
+                            <div class="input-group p-1">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="btnGroupAddon">Moteur C</div>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-lg mr-1">Avant</button>
+                                <button type="button" class="btn btn-primary btn-lg">Arriere</button>                                
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BOOTSTRAP -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
